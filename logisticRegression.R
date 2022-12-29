@@ -19,11 +19,7 @@ sink("logRegressionOutput1.txt", append=FALSE, split=TRUE);
 
 
 # Fit the model to the data by creating a formula and passing it to the glm function. 
-# In our case we want to predict the survival of a passanger using his/her age
-# so we make the model (Survived ~ age)
-# In other words, we're representing the relationship between Age (x) and Survived (y).
-# Becasue the dependent variable--Survived is a dummy, we choose to use logit model.
-# Note: Formulas in R take the form (y ~ x). 
+
 fit = glm(People_died ~ factor(Crashes_by_month) + factor(Crash_Time) + factor(BOROUGH) + factor(Ten_Most_Common_Factor) + Two_Factors
           + Three_Factors + Four_Factors + Five_Factors + factor(Ten_Most_Vehicle_Type) + Two_cars + Three_Cars
           + Four_Cars + Five_Cars, data = mydata, family=binomial(link = "logit"))
