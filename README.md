@@ -13,3 +13,6 @@ we believe that the question we’re asking here is interesting because identify
 the issue, we find it very important to minimize the gap between the current safety measurements and the causes of these incedents. So that we can reduce the chances of 
 having an accident due to one of them by finding alternative measures or by using our data analysis to help people make more informative choices that would hopefully keep
 them safe in the future.
+
+# Variables
+For the crash time, I categorical them into 5 variables which are other, midnight, school end time, traffic hours, and lunch hours. I also cut the vehicle type and contributing factor to the most common 10 to run the regression model.
