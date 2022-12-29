@@ -1,0 +1,38 @@
+borough
+6 Unspecified
+1 BRONX
+2 BROOKLYN
+3 QUEENS
+4 MANHATTAN
+5 STATEN ISLAND
+
+Crash_Time
+5 other
+1 midnight
+2 School end time
+3 Traffic hours
+4 Lunch hours
+
+Ten_Most_Common_Factor
+10 Backing Unsafely
+1 Driver Inattention/Distraction
+2 Failure to Yield Right-of-Way
+3 Following Too Closely
+4 Other Vehicular
+5 Passing or Lane Usage Improper
+6 Passing Too Closely
+7 Turning Improperly
+8 Unsafe Lane Changing
+9 Unspecified
+
+Ten_Most_Vehicle_Type
+10 Bike
+1 Box Truck
+2 Bus
+3 Motorcycle
+4 Pick-up Truck
+5 sedan
+6 Station Wagon/Sport Utility Vehicle
+7 Taxi
+8 Tractor Truck Diesel
+9 van
