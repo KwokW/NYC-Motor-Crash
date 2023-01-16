@@ -1,0 +1,50 @@
+---
+title: "NYC Motor Vehicle Collision Crashes Logistic Regression Analysis"
+author: "Jordan Wong"
+date: "2023-01-16"
+output: html_document
+---
+
+### First, clear all previous stuff out of the workplace...
+```{r}
+rm(list = ls());
+```
+
+### Input dataset
+```{r}
+mydata <- read.csv("Motor_Vehicle_Collisions_Crashes_log.csv",header=TRUE)
+```
+
+### Fit the model to the data by creating a formula and passing it to the glm function. 
+### I created a new column and use it as a dummy variable because I want to find out the relationship between each variables and the y. this column will indicate if there are any death occur in crashes.
+```{r}
+fit = glm(People_died ~ factor(Crashes_by_month) + factor(Crash_Time) + factor(BOROUGH) +                          factor(Ten_Most_Common_Factor) + Two_Factors + Three_Factors + Four_Factors + Five_Factors +             factor(Ten_Most_Vehicle_Type) + Two_cars + Three_Cars + Four_Cars + Five_Cars, data = mydata,            family=binomial(link = "logit"))
+```
+
+### Invoke the summary function to see the results
+```{r}
+summary(fit)
+```
+### Regression diagnostic 1
+### To make sure the model does not have multi-collinearity issue, we check the correlation between each two explanatory variables
+### Caculate correlation matrix
+```{r}
+correlation <- cor(mydata)
+round(correlation, 2)
+```
+### Regression diagnostic 2
+### Model specification errors?
+### The model does not exclude any "core" variables.
+### The model does not include superfluous variables.
+### The functional form of the model is suitably chosen.
+### There are no errors of measurement in the regressand and regressors.
+### Outliers in the data, if any, are taken into account
+```{r}
+summary(mydata)
+```
+
+### Turn off output
+```{r}
+sink();
+```
+
